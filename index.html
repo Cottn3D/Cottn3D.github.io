@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Caption Mask</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!--IMPORTS MODEL-VIEWER PKG -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+	<a id="top"></a>
+    <div id="navbar">
+		<a href="#detailsLink">Details</a>
+		<a href="#teamLink">Team</a>
+    </div>
+
+	<!-- PAGE CONTAINER -->
+	<div id="container">
+
+		<h1>Caption Mask</h1>
+		<div id="modelFrame">
+
+			<!-- Model functionality -->
+			<model-viewer
+				id="model"
+				src="assets/images/captionmask.glb" 
+				alt="Interactive 3D model of Caption Mask"
+				environment-image="neutral"
+				exposure="0.95"
+				shadow-intensity="4" 
+				shadow-softness="3" 
+				camera-orbit="60deg" 
+				camera-controls 
+				ar  
+				ar-modes="webxr scene-viewer quick-look">
+			</model-viewer>
+		</div>
+
+		<div id="description">
+			<p>The COVID-19 pandemic has been difficult for everyone. Masks have become a barrier to communication for Deaf and hard-of-hearing people who use lipreading as a tool to understand spoken language. In response to this, our team created Caption Mask: a lightweight, 3D printed device which uses a Raspberry Pi and LCD display to convert speech to text and display captions in real-time using automatic speech recognition (ASR). </p>
+		</div>
+
+		<a id="detailsLink"></a>
+		<h2>Project Details</h2>
+		<div id="details">
+			<!-- <iframe 
+				src="https://www.youtube.com/embed/X61jd9GH6dY">
+			</iframe> -->
+			<object id="mask_prez" data="assets/images/mask_prez.pdf" type="application/pdf" width="100%" height="1000px">
+				<p>Your web browser doesn't have a PDF plugin.
+			</object>
+			<button id="detailsButton" onclick="window.location.href='https://docs.google.com/document/d/1d9m15rWg1RPqzbxq0_e946qXfLFPtP3x/edit?usp=sharing&ouid=100209520312450126883&rtpof=true&sd=true';">Project Study Report (White Paper)</button>
+		</div>
+		
+		
+		
+		<!-- DELETE -->
+		<div>
+			<iframe 
+			id="figma" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FxeEQqmzvSdU2s9ckR4nSFP%2FAutism-Resources-Hub-%255BDEMO%255D%3Fnode-id%3D0%253A1" allowfullscreen>
+		</iframe>
+		<iframe 
+			src="https://www.youtube.com/embed/LgRk6ZLJekQ">
+		</iframe>
+		</div>
+		<!-- DELETE -->
+
+		
+		
+		<a id="teamLink"></a>
+		<h2>Our Team</h2>
+		<!-- TEAM -->
+		<div id="team">
+			<figure>
+				<img src="assets/images/carson.png" alt="Picture of Carson">
+				<figcaption class="humanName">Carson Schwab</figcaption>
+				<figcaption>Designer</figcaption>
+			</figure>
+			<figure id="margined">
+				<img src="assets/images/emily.jpg" alt="Picture of Emily">
+				<figcaption class="humanName">Emily Lederman</figcaption>
+				<figcaption>Software Engineer</figcaption>
+			</figure>
+			<figure>
+				<img src="assets/images/roshan.jpg" alt="Picture of Roshan">
+				<figcaption class="humanName">Roshan Mathew</figcaption>
+				<figcaption>Project Manager</figcaption>
+			</figure>
+		</div>
+	</div>
+
+	<div id="linkToTop">
+		<a id="spacer" href="#top">Jump to top</a>
+	</div>
+</body>
+</html>
