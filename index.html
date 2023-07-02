@@ -11,21 +11,23 @@
     <!--IMPORTS MODEL-VIEWER PKG -->
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
-
-	<!-- RESIZES BACKGROUND TO MATCH PAGE LENGTH -->
-	<!-- CODE ADAPTED FROM: https://www.sitepoint.com/community/t/how-to-determine-page-height-length/6347/7 -->
+	
 	<script>
-		function getHt(ref, ref2){ 
+/* 		function getHt(ref, ref2){ 
 			var offsetTrail=document.getElementById(ref);
 			var offsetTop=0;
 			var backgroundHeight=document.getElementById(ref2);
 			while(offsetTrail) { offsetTop+=offsetTrail.offsetTop;  offsetTrail=offsetTrail.offsetParent;   }
-			// for Macs
+				// for Macs
 			if(navigator.userAgent.indexOf("Mac") != -1 && typeof document.body.leftMargin != "undefined")
 				{ offsetTop+=document.body.topMargin;
 				}
 				backgroundHeight.style.height=offsetTop+"px";
 			}
+			
+				// RESIZES BACKGROUND TO MATCH PAGE LENGTH CODE ADAPTED FROM: 
+				// https://www.sitepoint.com/community/t/how-to-determine-page-height-length/6347/7
+			*/
 
 		function showDetails(obj) {
   			var hovered = obj.id;
@@ -92,11 +94,13 @@
 				document.getElementById("p4").style.display = "block";
 			}
 		}
-
 	</script>
 </head>
 
-<body onresize="getHt('endTxt', 'background')" onload="getHt('endTxt', 'background')">
+<!-- <body onresize="getHt('endTxt', 'background')" onload="getHt('endTxt', 'background')"> 
+
+	// updates background on resize
+-->
 
     <!-- NAVBAR -->
 	<a id="top"></a>
@@ -107,10 +111,10 @@
 
 	<!-- CONTENT -->
 	<div id="container">	
-
-		<!-- INTERACTIVE BACKGROUND -->
-		<!-- HDRI IMAGE SOURCE: https://cubebrush.co/era7/products/umh8tq/free-hq-space-hdri-ii -->
-		<model-viewer 
+		
+		<!-- INTERACTIVE BACKGROUND 
+			 HDRI: https://cubebrush.co/era7/products/umh8tq/free-hq-space-hdri-ii -->
+		<!-- <model-viewer 
 			reveal="auto"
 			interaction-prompt="none"
 			camera-controls
@@ -121,7 +125,7 @@
 			alt="Moving 3D sky background" 
 			src="assets/images/planet.glb"
 			id="background">
-		</model-viewer>
+		</model-viewer> -->
 
 		<!-- INTRO -->
 		<div id="intro">
@@ -143,12 +147,15 @@
 			<h3>My Contact Info</h3>
 			<p id="contact">Email: <a href="carsonschwab@gmail.com">Carsonschwab@gmail.com</a></p>
 			<div id="resumeButton"><button id="abtButton" onclick="document.location='resume.html'">Check out my resume!</button></div>
+			<!-- <div id="resumeButton"><button id="abtButton" onclick="document.location='web-resume.html'">Check out my resume!</button></div> --> 
+				<!-- web version -->
 
 			<h3>My Timeline</h3>
 			<div id="timelineContainer">
 				<hr>
-				<!-- icon work file https://www.figma.com/file/MqYJzHLJIs6oaEHwJdw7kc/Untitled?node-id=0%3A1 -->
+				
 				<div id="timeline">
+						<!-- Timeline icons - https://www.figma.com/file/MqYJzHLJIs6oaEHwJdw7kc/Untitled?node-id=0%3A1 -->
 					<img id="item_aa" onmouseover="showDetails(this)" onmouseout="hideDetails(this)" src="assets/images/born.png" alt="Icon of a birthday cake on a timeline">
 					<img id="item_bb" onmouseover="showDetails(this)" onmouseout="hideDetails(this)" src="assets/images/move.png" alt="Icon of a moving truck on a timeline">
 					<img id="item_cc" onmouseover="showDetails(this)" onmouseout="hideDetails(this)" src="assets/images/grad.png" alt="Icon of a graduation cap on a timeline">
@@ -187,13 +194,13 @@
 					<p id="new_l" class="hide"><span>Develop:</span><br>2023+<br>Somewhere<br>New</p>
 				</div>
 			</div>
-
 		</div>
 		
 		<!-- PORTFOLIO -->
-		<a id="portfolioLink"></a>
+		<a id="portfolioLink"></a> 
 		<div id="portfolio">
 			<h2>Portfoli<span id="lastLetter">o</span></h2>
+				 <!-- FIX SPAN ISSUE -->
 			<div id="buttonBanner">
 				<div id="projectButtons">
 					<button class="pButton" id="p1Button" onclick="showProject(this)">Autism Resources Hub</button>
@@ -206,8 +213,6 @@
 					<img class="pButtonIcon" id="p4ButtonIcon" src="assets/images/old_port.png" alt="Icon of ...">
 				</div>
 			</div>
-
-			<!-- ------------------------------------------------------------------------------------------ -->
 			
 			<div id="projectCanvas">
 				<div id="p1">
@@ -226,26 +231,23 @@
 							<button class="pButton" class="p1Button" onclick="window.location.href='https://sonaisha.wixsite.com/hcin620/high-fidelity-wireframes';">Wireframes (Hi-Fi)</button>
 						</div>
 					</div>
+					
 					<div class="moreDetails">
 						<!-- <div class="detailShots">
 							<img src="assets/images/arh-article.png" alt="...">
 							<img src="assets/images/arh-forum.png" alt="...">
 						</div> -->
 						<iframe 
-							id="figma" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FxeEQqmzvSdU2s9ckR4nSFP%2FAutism-Resources-Hub-%255BDEMO%255D%3Fnode-id%3D0%253A1" allowfullscreen>
+							id="figma" 
+							src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FxeEQqmzvSdU2s9ckR4nSFP%2FAutism-Resources-Hub-%255BDEMO%255D%3Fnode-id%3D0%253A1"
+							allowfullscreen>
 						</iframe>
+						
 						<iframe 
 							src="https://www.youtube.com/embed/LgRk6ZLJekQ">
 						</iframe>
 					</div>
 				</div>
-
-					<!-- 
-						https://www.youtube.com/watch?v=LgRk6ZLJekQ 
-						https://sonaisha.wixsite.com/hcin620/high-fidelity-wireframes
-					-->
-
-				<!-- ---------------------------------------------------------------------------------------------- -->
 
 				<div id="p2">
 					<div class="projectContent">
@@ -255,7 +257,7 @@
 							<model-viewer
 								class="model"
 								src="assets/images/caption-mask.glb" 
-								alt="Interactive 3D model of a key holder"
+								alt="Face mask that displays captions"
 								environment-image="neutral"
 								exposure="0.95"
 								shadow-intensity="4" 
@@ -265,6 +267,7 @@
 								ar-modes="webxr scene-viewer quick-look">
 							</model-viewer>
 						</div>
+						
 						<div class="projectDetails">
 							<h3>Caption Mask</h3>
 							<p>The COVID-19 pandemic has made most everyone's life more difficult. This is especially true for the Deaf and Hard of Hearing Community due to the fact that many deaf people can't read lips while the person they are communicating with is wearing a mask that obscures their mouth. Caption Mask solves this problem by converting the user's speech to text which is displayed on a screen attached to the mask.</p>
@@ -274,6 +277,7 @@
 							<button class="pButton" class="p1Button" onclick="window.location.href='https://docs.google.com/document/d/1d9m15rWg1RPqzbxq0_e946qXfLFPtP3x/edit?usp=sharing&ouid=100209520312450126883&rtpof=true&sd=true';">Project Study Report (White Paper)</button>
 						</div>
 					</div>
+					
 					<div class="moreDetails">
 						<!-- <div class="detailShots">
 							<img src="assets/images/temp.png" alt="...">
@@ -281,34 +285,22 @@
 						</div> -->
 						<iframe 
 							src="https://www.youtube.com/embed/X61jd9GH6dY">
+							<!-- src="https://www.youtube.com/watch?v=k2LP7bHNNTc" -->
 						</iframe>
+						
 						<object id="mask_prez" data="assets/images/mask_prez.pdf" type="application/pdf" width="100%" height="1000px">
 							<p>Your web browser doesn't have a PDF plugin.
 						</object>
 					</div>
 				</div>
-
-					<!-- 
-						https://www.youtube.com/watch?v=k2LP7bHNNTc
-						https://www.youtube.com/watch?v=X61jd9GH6dY
-					-->
-
-				<!-- ---------------------------------------------------------------------------------------------- -->
-
 				
-
 				<div class="projectContent" id="p4">
-					
 					<object id="id_port" data="assets/images/id_portfolio.pdf" type="application/pdf" width="100%" height="1000px">
 						<p>Your web browser doesn't have a PDF plugin.
 					</object>
 				</div>
-
-				<!-- ---------------------------------------------------------------------------------------------- -->
-
-
+				
 				<div id="p3">
-
 					<div class="projectContent">
 						<div class="frame">
 							<model-viewer
@@ -387,8 +379,9 @@
 		</div>
 
 		<div id="linkToTop">
-			<p id="endTxt">.</p>
-			<a id="spacer" href="#top">Jump to top</a>
+			<!-- <p id="endTxt">.</p> -->
+			<a id="spacer" href="#top">Jump to top</a>			
+			<!-- ADD LINK TO PORTFOLIO TOO -->
 		</div>
 	</div>
 </body>
