@@ -67,16 +67,16 @@
 				document.getElementById("p4").style.visibility = "hidden";
 				document.getElementById("p4").style.display = "none";
 			}
-			if (clicked == "p4Button"){
-				document.getElementById("p1").style.visibility = "hidden";
-				document.getElementById("p1").style.display = "none";
-				document.getElementById("p2").style.visibility = "hidden";
-				document.getElementById("p2").style.display = "none";
-				document.getElementById("p3").style.visibility = "hidden";
-				document.getElementById("p3").style.display = "none";
-				document.getElementById("p4").style.visibility = "visible";
-				document.getElementById("p4").style.display = "block";
-			}
+			// if (clicked == "p4Button"){
+			// 	document.getElementById("p1").style.visibility = "hidden";
+			// 	document.getElementById("p1").style.display = "none";
+			// 	document.getElementById("p2").style.visibility = "hidden";
+			// 	document.getElementById("p2").style.display = "none";
+			// 	document.getElementById("p3").style.visibility = "hidden";
+			// 	document.getElementById("p3").style.display = "none";
+			// 	document.getElementById("p4").style.visibility = "visible";
+			// 	document.getElementById("p4").style.display = "block";
+			// }
 		}
 	</script>
 </head>
@@ -171,7 +171,8 @@
 					<button class="pButton" id="p1Button" onclick="showProject(this)">Autism Resources Hub</button>
 					<button class="pButton" id="p2Button" onclick="showProject(this)">Caption Mask</button>
 					<button class="pButton" id="p3Button" onclick="showProject(this)">3D Models</button>
-					<button class="pButton" id="p4Button" onclick="showProject(this)">Industrial Design Projects</button>
+					<!-- <button class="pButton" id="p4Button" onclick="showProject(this)">Industrial Design Projects</button> -->
+					<button class="pButton" id="p4Button" onclick="document.location='industrial-design.html'">Industrial Design Projects</button>
 					<!-- <img class="pButtonIcon" id="p1ButtonIcon" src="assets/images/arh.png" alt="Icon of ...">
 					<img class="pButtonIcon" id="p2ButtonIcon" src="assets/images/caption.png" alt="Icon of ...">
 					<img class="pButtonIcon" id="p3ButtonIcon" src="assets/images/3d_models.png" alt="Icon of ...">
@@ -260,11 +261,11 @@
 					</div>
 				</div>
 				
-				<div id="p4" class="projectContent">
+				<!-- <div id="p4" class="projectContent">
 					<object id="id_port" data="assets/images/id_portfolio.pdf" type="application/pdf" width="100%" height="100%">
 						<p>Your web browser doesn't have a PDF plugin.
 					</object>
-				</div>
+				</div> -->
 				
 				<div id="p3">
 					<div class="projectContent">
